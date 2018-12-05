@@ -38,6 +38,7 @@ namespace TicTacToe
                 {
                     //game ends in tie but still need to set the button content
                     clickedButton.Content = gameController.GetPlayer();
+                    gameController.GamesPlayed++;
                 }
                 return; //this square already taken
             }
