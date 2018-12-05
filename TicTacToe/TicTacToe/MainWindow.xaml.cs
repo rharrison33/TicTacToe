@@ -32,8 +32,13 @@ namespace TicTacToe
         {
             var clickedButton = sender as Button;
 
-            if(!string.IsNullOrEmpty(clickedButton.Content.ToString()))
+            if (!string.IsNullOrEmpty(clickedButton.Content.ToString()) || gameController.IsGameOver())
             {
+                if (gameController.WinnerLabel.EndsWith("tie!") && string.IsNullOrEmpty(clickedButton.Content.ToString()))
+                {
+                    //game ends in tie but still need to set the button content
+                    clickedButton.Content = gameController.GetPlayer();
+                }
                 return; //this square already taken
             }
 
@@ -44,10 +49,51 @@ namespace TicTacToe
             if (gameController.IsGameOver())
             {
                 gameController.DeclareWinner(clickedButton.Content.ToString());
+                HighlightWinningCells();
             }
+            else
+            {
+                gameController.SwitchPlayer();
+            }
+        }
 
-            gameController.SwitchPlayer();
+        private void HighlightWinningCells()
+        {
+            foreach (Control control in BoardGrid.Children)
+            {
+                if (control.GetType() == typeof(Button))
+                {
+                    Button btn = ((Button)control);
+                    string buttonName = btn.Name;
+                    //only check square buttons
+                    if (!buttonName.StartsWith("Square"))
+                    {
+                        continue;
+                    }
+                    if (gameController.WinningCoordinates.Contains(buttonName.Substring(buttonName.Length - 2, 2)))
+                    {
+                        btn.Background = Brushes.DeepSkyBlue;
+                    }
+                }
 
+                
+            }
+        }
+
+        private void ClearBoardGrid()
+        {
+            foreach (Control control in BoardGrid.Children)
+            {
+                if (control.GetType() == typeof(Button))
+                {
+                    Button btn = ((Button)control);
+                    if (btn.Name.StartsWith("Square"))
+                    {
+                        btn.Content = string.Empty;
+                        btn.Background = Brushes.White;
+                    }
+                }
+            }
         }
 
         private int getYCoordinate(string name)
@@ -62,6 +108,12 @@ namespace TicTacToe
             //name contains the button name
             //button names are formated where last two chars are indexes
             return int.Parse(name.Substring(name.Length - 2, 1));
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            gameController.ResetGame();
+            ClearBoardGrid();
         }
     }
 }
