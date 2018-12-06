@@ -152,12 +152,14 @@ namespace TicTacToe
 
         internal void DeclareWinner(string winner)
         {
+            GamesPlayed++;
+
             //Check for tie
-            if(WinnerLabel.Contains("tie")){
+            if (WinnerLabel.Contains("tie")){
                 return;
             }
-            //Otherwise winner is last active player
-            GamesPlayed++;
+
+            //Otherwise winner is last active player            
             if (winner.Equals("X"))
             {
                 X_wins = true;
