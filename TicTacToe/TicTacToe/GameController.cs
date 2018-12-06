@@ -16,6 +16,7 @@ namespace TicTacToe
         private int games_played = 0;
         private string[] winning_coordinates = new string[3];
         private string winner_label = string.Empty;
+        private bool game_over = false;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -59,6 +60,8 @@ namespace TicTacToe
             set { winning_coordinates = value; }
         }
 
+        public bool GameOver { get => game_over; set => game_over = value; }
+
         // Create the OnPropertyChanged method to raise the event
         protected void OnPropertyChanged(string name)
         {
@@ -73,6 +76,7 @@ namespace TicTacToe
             x_wins = false;
             o_wins = false;
             WinnerLabel = string.Empty;
+            GameOver = false;
         }
 
         //Increments player, can also be used to see how many moves have happend.
@@ -148,6 +152,11 @@ namespace TicTacToe
 
         internal void DeclareWinner(string winner)
         {
+            //Check for tie
+            if(WinnerLabel.Contains("tie")){
+                return;
+            }
+            //Otherwise winner is last active player
             GamesPlayed++;
             if (winner.Equals("X"))
             {
