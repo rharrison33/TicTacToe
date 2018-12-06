@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TicTacToe
 {
@@ -32,15 +22,9 @@ namespace TicTacToe
         {
             var clickedButton = sender as Button;
 
-            if (!string.IsNullOrEmpty(clickedButton.Content.ToString()) || gameController.IsGameOver())
+            if (!string.IsNullOrEmpty(clickedButton.Content.ToString()) || gameController.GameOver)
             {
-                if (gameController.WinnerLabel.EndsWith("tie!") && string.IsNullOrEmpty(clickedButton.Content.ToString()))
-                {
-                    //game ends in tie but still need to set the button content
-                    clickedButton.Content = gameController.GetPlayer();
-                    gameController.GamesPlayed++;
-                }
-                return; //this square already taken
+                return; //this square already taken or game is over
             }
 
             clickedButton.Content = gameController.GetPlayer();
@@ -49,6 +33,7 @@ namespace TicTacToe
 
             if (gameController.IsGameOver())
             {
+                gameController.GameOver = true;
                 gameController.DeclareWinner(clickedButton.Content.ToString());
                 HighlightWinningCells();
             }

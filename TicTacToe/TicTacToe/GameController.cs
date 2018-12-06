@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel;
 
 namespace TicTacToe
@@ -10,17 +6,14 @@ namespace TicTacToe
     class GameController : INotifyPropertyChanged
     {
         private int active_player = 0;                  //Odd is player X, Even is player Y
-        private char[,] game_grid = new char[3, 3];     //Structure representing state of game
         private bool x_wins = false;
         private bool o_wins = false;
         private int games_played = 0;
-        private string[] winning_coordinates = new string[3];
         private string winner_label = string.Empty;
-        private bool game_over = false;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public char[,] Game_grid { get => game_grid; set => game_grid = value; }
+        public char[,] Game_grid { get; set; } = new char[3, 3];
 
         public bool O_wins {
             get { return o_wins; }
@@ -54,13 +47,9 @@ namespace TicTacToe
             }
         }
 
-        public string[] WinningCoordinates
-        {
-            get { return winning_coordinates; }
-            set { winning_coordinates = value; }
-        }
+        public string[] WinningCoordinates { get; set; } = new string[3];
 
-        public bool GameOver { get => game_over; set => game_over = value; }
+        public bool GameOver { get; set; } = false;
 
         // Create the OnPropertyChanged method to raise the event
         protected void OnPropertyChanged(string name)
@@ -70,8 +59,8 @@ namespace TicTacToe
 
         internal void ResetGame()
         {
-            Array.Clear(game_grid, 0, 9);
-            Array.Clear(winning_coordinates, 0, 3);
+            Array.Clear(Game_grid, 0, 9);
+            Array.Clear(WinningCoordinates, 0, 3);
             active_player = 0;
             x_wins = false;
             o_wins = false;
@@ -100,7 +89,7 @@ namespace TicTacToe
             for(int i = 0; i < 3; i++)
             {
                 //check for horizontal winner
-                if(game_grid[i, 0] != '\0' && game_grid[i,0] == game_grid[i,1] && game_grid[i,1] == game_grid[i,2])
+                if(Game_grid[i, 0] != '\0' && Game_grid[i,0] == Game_grid[i,1] && Game_grid[i,1] == Game_grid[i,2])
                 {
                     WinningCoordinates[0] = i.ToString() + 0;
                     WinningCoordinates[1] = i.ToString() + 1;
@@ -108,7 +97,7 @@ namespace TicTacToe
                     return true;
                 }
                 //check for vertical winner
-                else if (game_grid[0,i] != '\0' && game_grid[0,i] == game_grid[1,i] && game_grid[1,i] == game_grid[2,i])
+                else if (Game_grid[0,i] != '\0' && Game_grid[0,i] == Game_grid[1,i] && Game_grid[1,i] == Game_grid[2,i])
                 {
                     WinningCoordinates[0] = 0 + i.ToString();
                     WinningCoordinates[1] = 1 + i.ToString();
@@ -118,7 +107,7 @@ namespace TicTacToe
                 //check for diagonal winner when i == 0
                 else if(i == 0)
                 {
-                    if(game_grid[i, 0] != '\0' && game_grid[i,0] == game_grid[i+1,i+1] && game_grid[i,0] == game_grid[i + 2, i + 2])
+                    if(Game_grid[i, 0] != '\0' && Game_grid[i,0] == Game_grid[i+1,i+1] && Game_grid[i,0] == Game_grid[i + 2, i + 2])
                     {
                         WinningCoordinates[0] = "00";
                         WinningCoordinates[1] = "11";
@@ -129,7 +118,7 @@ namespace TicTacToe
                 //check for diagonal winner when i == 2
                 else if (i == 2)
                 {
-                    if (game_grid[i, 0] != '\0' && game_grid[i, 0] == game_grid[i - 1, i - 1] && game_grid[i, 0] == game_grid[i - 2, 2])
+                    if (Game_grid[i, 0] != '\0' && Game_grid[i, 0] == Game_grid[i - 1, i - 1] && Game_grid[i, 0] == Game_grid[i - 2, 2])
                     {
 
                         WinningCoordinates[0] = "20";
