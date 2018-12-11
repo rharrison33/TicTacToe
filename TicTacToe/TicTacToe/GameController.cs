@@ -5,26 +5,14 @@ namespace TicTacToe
 {
     class GameController : INotifyPropertyChanged
     {
-        private int active_player = 0;                  //Odd is player X, Even is player Y
-        private bool x_wins = false;
-        private bool o_wins = false;
+        private int active_player = 0;                  //Odd is player X, Even is player Y.
+                                                        //Also used to count number of moves.
         private int games_played = 0;
         private string winner_label = string.Empty;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public char[,] Game_grid { get; set; } = new char[3, 3];
-
-        public bool O_wins {
-            get { return o_wins; }
-            set { o_wins = value; OnPropertyChanged("O_wins"); }
-        }
-
-        public bool X_wins
-        {
-            get { return x_wins; }
-            set { x_wins = value; OnPropertyChanged("X_wins"); }
-        }
 
         public int GamesPlayed
         {
@@ -62,8 +50,6 @@ namespace TicTacToe
             Array.Clear(Game_grid, 0, 9);
             Array.Clear(WinningCoordinates, 0, 3);
             active_player = 0;
-            x_wins = false;
-            o_wins = false;
             WinnerLabel = string.Empty;
             GameOver = false;
         }
@@ -147,17 +133,10 @@ namespace TicTacToe
             if (WinnerLabel.Contains("tie")){
                 return;
             }
-
-            //Otherwise winner is last active player            
-            if (winner.Equals("X"))
-            {
-                X_wins = true;
-            }
             else
             {
-                O_wins = true;
+                WinnerLabel = GetPlayer() + " wins!";
             }
-            WinnerLabel = GetPlayer() + " wins!";
         }
 
 
