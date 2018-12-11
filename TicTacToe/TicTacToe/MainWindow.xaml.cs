@@ -56,6 +56,7 @@ namespace TicTacToe
                     {
                         continue;
                     }
+                    //button names are of the form, Square##, where ## are the coordinates of the board.
                     if (gameController.WinningCoordinates.Contains(buttonName.Substring(buttonName.Length - 2, 2)))
                     {
                         btn.Background = Brushes.DeepSkyBlue;
