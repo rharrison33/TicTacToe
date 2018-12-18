@@ -1,0 +1,13 @@
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Release\TicTacToe.exe.config
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Release\TicTacToe.exe
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Release\TicTacToe.pdb
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\MainWindow.baml
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\MainWindow.g.cs
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\App.g.cs
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe_MarkupCompile.cache
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.g.resources
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.Properties.Resources.resources
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.csproj.GenerateResource.cache
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.exe
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.pdb
