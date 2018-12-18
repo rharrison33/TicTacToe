@@ -28,6 +28,6 @@
         <Button Grid.Row="2" Grid.Column="2" Name="Square22" Content="" Click="Button_Click" BorderThickness="5" MinWidth="200" MinHeight="200" Background="White" BorderBrush="Purple" FontSize="100" Foreground="Purple" />
         <Label Grid.Row="3" Grid.Column="0" Content="{Binding Path=GamesPlayedLabel}" FontSize="25" Foreground="Purple"/>
         <Label Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Content="{Binding Path=WinnerLabel}" FontSize="25" Foreground="Purple"/>
-        <Button Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" Content="Reset Game" VerticalContentAlignment="Center" Click="Reset_Click" Background="White" BorderBrush="Purple" FontSize="25" Foreground="Purple" Margin="0.4,0,0.2,49" Width="205"/>
+        <Button Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" Content="{Binding Path=ResetButtonLabel}" VerticalContentAlignment="Center" Click="Reset_Click" Background="White" BorderBrush="Purple" FontSize="25" Foreground="Purple" Margin="0.4,0,0.2,49" Width="205"/>
     </Grid>
 </Window>

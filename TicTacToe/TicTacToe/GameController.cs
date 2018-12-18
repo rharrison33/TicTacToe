@@ -35,9 +35,23 @@ namespace TicTacToe
             }
         }
 
+        public string ResetButtonLabel
+        {
+            get { return winner_label; }
+            set
+            {
+                winner_label = value; OnPropertyChanged("ResetButtonLabel");
+            }
+        }
+
         public string[] WinningCoordinates { get; set; } = new string[3];
 
         public bool GameOver { get; set; } = false;
+
+        public GameController()
+        {
+            ResetButtonLabel = "Reset Game";
+        }
 
         // Create the OnPropertyChanged method to raise the event
         protected void OnPropertyChanged(string name)
@@ -51,6 +65,7 @@ namespace TicTacToe
             Array.Clear(WinningCoordinates, 0, 3);
             active_player = 0;
             WinnerLabel = string.Empty;
+            ResetButtonLabel = "Reset Game";
             GameOver = false;
         }
 

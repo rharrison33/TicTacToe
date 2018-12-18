@@ -36,6 +36,7 @@ namespace TicTacToe
                 gameController.GameOver = true;
                 gameController.DeclareWinner(clickedButton.Content.ToString());
                 HighlightWinningCells();
+                gameController.ResetButtonLabel = "Play Again";
             }
             else
             {

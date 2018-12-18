@@ -13,3 +13,17 @@ c:\users\rober\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.Gener
 c:\users\rober\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
 c:\users\rober\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 c:\users\rober\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.config
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Debug\TicTacToe.pdb
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csprojAssemblyReference.cache
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\MainWindow.g.cs
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\App.g.cs
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe_MarkupCompile.cache
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\MainWindow.baml
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.g.resources
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.cache
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
