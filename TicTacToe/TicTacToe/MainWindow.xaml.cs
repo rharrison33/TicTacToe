@@ -11,6 +11,7 @@ namespace TicTacToe
     public partial class MainWindow : Window
     {
         private GameController gameController = new GameController();
+        private bool tempContent = false;
 
         public MainWindow()
         {
@@ -22,12 +23,14 @@ namespace TicTacToe
         {
             var clickedButton = sender as Button;
 
-            if (!string.IsNullOrEmpty(clickedButton.Content.ToString()) || gameController.GameOver)
+            if (!tempContent && !string.IsNullOrEmpty(clickedButton.Content.ToString()) || gameController.GameOver)
             {
                 return; //this square already taken or game is over
             }
 
             clickedButton.Content = gameController.GetPlayer();
+            tempContent = false;
+            clickedButton.Foreground = Brushes.Purple;
             string buttonName = clickedButton.Name;
             gameController.Game_grid[getXCoordinate(buttonName), getYCoordinate(buttonName)] = gameController.GetPlayer();
 
@@ -102,6 +105,36 @@ namespace TicTacToe
         {
             gameController.ResetGame();
             ClearBoardGrid();
+        }
+
+        private void MouseEnterHandler(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (gameController.GameOver)
+            {
+                return;
+            }
+
+            Button srcButton = e.Source as Button;
+            srcButton.BorderBrush = Brushes.YellowGreen;
+
+            if(srcButton.Content.ToString() == string.Empty)
+            {
+                srcButton.Content = gameController.GetPlayer();
+                srcButton.Foreground = Brushes.DeepPink;
+                tempContent = true;
+            }
+        }
+
+        private void MouseExitHandler(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            Button srcButton = e.Source as Button;
+            srcButton.BorderBrush = Brushes.Purple;
+            if (tempContent)
+            {
+                srcButton.Content = string.Empty;
+                srcButton.Foreground = Brushes.Purple;
+                tempContent = false;
+            }
         }
     }
 }
