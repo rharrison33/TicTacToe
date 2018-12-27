@@ -27,3 +27,7 @@ C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.cs
 C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
 C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe.manifest
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Debug\TicTacToe.application
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe.manifest
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Debug\TicTacToe.application

@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Rob's Tic Tac Toe" ResizeMode="NoResize" Height="689" Width="620">
+        Title="Rob's Tic Tac Toe" ResizeMode="NoResize" Height="689" Width="620"
+        Icon="Images\Icon1.ico">
     <Grid Name="BoardGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

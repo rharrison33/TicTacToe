@@ -11,3 +11,8 @@ C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.
 C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.csproj.CoreCompileInputs.cache
 C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.exe
 C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.pdb
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Release\TicTacToe.exe.manifest
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\bin\Release\TicTacToe.application
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.csprojAssemblyReference.cache
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.exe.manifest
+C:\Users\rober\source\repos\TicTacToe\TicTacToe\TicTacToe\obj\Release\TicTacToe.application

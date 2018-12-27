@@ -5,7 +5,7 @@ namespace TicTacToe
 {
     class GameController : INotifyPropertyChanged
     {
-        private int active_player = 0;                  //Odd is player X, Even is player Y.
+        private int num_moves = 0;                  //Odd is player X, Even is player Y.
                                                         //Also used to count number of moves.
         private int games_played = 0;
         private string winner_label = string.Empty;
@@ -63,7 +63,7 @@ namespace TicTacToe
         {
             Array.Clear(Game_grid, 0, 9);
             Array.Clear(WinningCoordinates, 0, 3);
-            active_player = 0;
+            num_moves = 0;
             WinnerLabel = string.Empty;
             ResetButtonLabel = "Reset Game";
             GameOver = false;
@@ -72,17 +72,17 @@ namespace TicTacToe
         //Increments player, can also be used to see how many moves have happend.
         public void SwitchPlayer()
         {
-            active_player++;
+            num_moves++;
         }
 
         public char GetPlayer()
         {
-            return active_player % 2 == 0 ? 'X' : 'O';
+            return num_moves % 2 == 0 ? 'X' : 'O';
         }
 
         public bool IsGameOver()
         {
-            if(active_player < 4)
+            if(num_moves < 4)
             {
                 return false;   //minimum 5 total moves before someone can win.
             }
@@ -131,7 +131,7 @@ namespace TicTacToe
             }
 
             //check for tie
-            if (active_player == 8)
+            if (num_moves == 8)
             {
                 WinnerLabel = "It's a tie!";
                 return true;
